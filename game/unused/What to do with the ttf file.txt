@@ -1,0 +1,5 @@
+Copy and place "PlaypenSans-Regular.ttf" into your ->
+
+\renpy-8.3.6-sdk\renpy\common
+
+This is game's font. Without it, it won't run.

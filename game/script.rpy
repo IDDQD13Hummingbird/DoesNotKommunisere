@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define anon = Character("Unknown")
+define anon = Character("Unknown", color = "#b0d7e3")
 define dream = ImageDissolve("imagedissolve dream.png", 1.0, 64)
 define thought = ImageDissolve("imagedissolve thought.png", 1.0, 64)
 define crack = ImageDissolve("imagedissolve crack.png", 1.0, 64)
@@ -151,8 +151,8 @@ label scenario_1:
 label scenario_2:
 
     "Nothing here yet!"
-    "But you can help us make more content by answering our survey here : "
-    "https://docs.google.com/forms/d/e/1FAIpQLSefQgoA1e2YYXFHBURse9ahTnFvx6gCZZFeaYTwrObs_Nsd6A/viewform"
+    "But you can help us make more content by answering our survey {a=https://docs.google.com/forms/d/e/1FAIpQLSefQgoA1e2YYXFHBURse9ahTnFvx6gCZZFeaYTwrObs_Nsd6A/viewform}here{/a}!"
+    "...just play the rest of the game, and come back to click on {a=https://docs.google.com/forms/d/e/1FAIpQLSefQgoA1e2YYXFHBURse9ahTnFvx6gCZZFeaYTwrObs_Nsd6A/viewform}this text{/a}."
 
     jump level_choose
 
