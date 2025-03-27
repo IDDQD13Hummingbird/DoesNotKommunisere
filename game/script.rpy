@@ -180,7 +180,7 @@ label scenario_1:
         "You feel indifferent to this. What shall you do?"
 
 menu:
-    "Where are their parents looking? Call the child services!":
+    "Where are their parents looking? \nCall the child services!":
         jump choice2_a
 
     "Okay, this is unacceptable. Scold 'em.":
@@ -191,21 +191,21 @@ menu:
 
 
         label choice2_a:
-            scene bg choice2_a
+            scene bg choice_2a
             anon "woah! chill, dude!"
             "Here's the barnevarn number. Only use it if child is in danger."
             "{i}With that thought in mind, let's consider the situation again :{/i}"
             jump choice_2
 
         label choice2_b:
-            scene bg choice2_b
+            scene bg choice_2b
             anon "woah!! don't talk to me like that!!"
-            "Okay, this is something worth calling the child protection over.\n{i}On you.{/i}"
+            "Okay, this is something worth calling \nthe child protection over. {i}On you.{/i}"
             "{i}With that thought in mind, let's consider the situation again :{/i}"
             jump choice_2
 
         label choice2_c:
-            scene bg choice2_c
+            scene bg choice_2c
             "Chill. Kid's doing his stuff. \nWho are we to touch someone else's child?"
             jump choice2_done
         #scene bg start
