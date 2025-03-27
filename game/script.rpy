@@ -7,8 +7,15 @@ define anon = Character("Unknown", color = "#b0d7e3")
 define dream = ImageDissolve("imagedissolve dream.png", 1.0, 64)
 define thought = ImageDissolve("imagedissolve thought.png", 1.0, 64)
 define crack = ImageDissolve("imagedissolve crack.png", 1.0, 64)
+define p_nvl = Character("", kind=nvl)
+$ i = 0
  
-
+#screen debug_button():
+#    imagebutton:
+#        xalign 0.7
+#        ycenter 0.06 
+#        auto "gui/debug_button.png" action OpenURL("https://www.patreon.com/bePatron?u=52492546")
+# define debug_button = ImageButton "gui/debug_button.png" xalign 0.7 ycenter 0.06 
 # The game starts here.
 
 label start:
@@ -25,17 +32,41 @@ label start:
 
     # These display lines of dialogue.
 
+label lmain_menu :
+$ i = 0
+show bg level_choose   ##add main navigation screen background here. 
+menu:
+        "Level select":
+            jump level_choose
+        "Useful sources":
+            jump sources
+        "Exit":
+            jump end_game
+
+label sources:
+    "Useful information sourses :"
+    ##call screen debug_button #action OpenURL("https://www.patreon.com/bePatron?u=52492546") 
+    ##debug_button ("Patreon") action OpenURL("https://www.patreon.com/bePatron?u=52492546")
+    p_nvl "Move to the Hamar Region - {a=https://hamarregionen.no/move-to-the-hamar-region/}{color=#ff0000}hamarregionen.no{/color}{/a}"
+    p_nvl "Immigration office - {a=http://udi.no/en/}{color=#ff0000}UDI.no{/color}{/a}"
+    p_nvl "Change adress or contact information, pay taxes - {a=https://www.skatteetaten.no/person/}{color=#ff0000}Skattetatten.no{/color}{/a}"
+    p_nvl "Help finding job, getting medical help and financial support - {a=https://www.nav.no/}{color=#ff0000}NAV.no{/color}{/a}"
+    nvl clear
+    ##hide debug_button
+    jump lmain_menu
+
 label level_choose:
 show bg level_choose
 with dissolve
 "Choose your level :"
+
 menu:
-        "Pant game":
-            jump scenario_1
-        "Other games":
-            jump scenario_2
-        "Exit":
-            jump end_game
+    "Pant game" if i == 0:
+        jump scenario_1
+    "More content":
+        jump scenario_2
+    "Back to main menu":
+        jump lmain_menu
 
 
 label scenario_1:
@@ -151,9 +182,9 @@ label scenario_1:
 label scenario_2:
 
     "Nothing here yet!"
-    "But you can help us make more content by answering our survey {a=https://docs.google.com/forms/d/e/1FAIpQLSefQgoA1e2YYXFHBURse9ahTnFvx6gCZZFeaYTwrObs_Nsd6A/viewform}here{/a}!"
-    "...just play the rest of the game, and come back to click on {a=https://docs.google.com/forms/d/e/1FAIpQLSefQgoA1e2YYXFHBURse9ahTnFvx6gCZZFeaYTwrObs_Nsd6A/viewform}this text{/a}."
-
+    "But you can help us make more content by answering our survey {a=https://docs.google.com/forms/d/e/1FAIpQLSefQgoA1e2YYXFHBURse9ahTnFvx6gCZZFeaYTwrObs_Nsd6A/viewform}{color=#ff0000}here{/color}{/a}!"
+    "...just play the rest of the game, and come back to click on {a=https://docs.google.com/forms/d/e/1FAIpQLSefQgoA1e2YYXFHBURse9ahTnFvx6gCZZFeaYTwrObs_Nsd6A/viewform}{color=#ff0000}this text{/color}{/a}."
+    $ i = 1
     jump level_choose
 
 label end_game:

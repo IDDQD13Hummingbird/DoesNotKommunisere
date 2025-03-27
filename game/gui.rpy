@@ -25,7 +25,7 @@ define config.check_conflicting_properties = True
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#010127'
+define gui.accent_color = '#272782'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = '#bbbbbb'
