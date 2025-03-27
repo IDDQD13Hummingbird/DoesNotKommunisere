@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 62: end of line expected.
-    "Pant game" if i: 0
-                      ^
+File "game/script.rpy", line 182: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    menu:
+    ^
 
 Ren'Py Version: Ren'Py 8.3.6.25022803
-Wed Mar 26 12:48:27 2025
+Thu Mar 27 20:31:21 2025

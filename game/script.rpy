@@ -179,16 +179,15 @@ label scenario_1:
             with dissolve
         "You feel indifferent to this. What shall you do?"
 
-            menu:
+menu:
+    "Where are their parents looking? Call the child services!":
+        jump choice2_a
 
-                "Where are their parents looking? Call the child services!":
-                    jump choice2_a
+    "Okay, this is unacceptable. Scold 'em.":
+        jump choice2_b
 
-                "Okay, this is unacceptable. Scold 'em.":
-                    jump choice2_b
-
-                "Yeah, you go, child! Earn that pocket money!":
-                    jump choice2_c
+    "Yeah, you go, child! Earn that pocket money!":
+        jump choice2_c
 
 
         label choice2_a:
