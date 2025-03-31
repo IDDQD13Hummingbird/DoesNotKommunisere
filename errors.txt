@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 182: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    menu:
-    ^
+File "game/script.rpy", line 199: invalid syntax
+    if loves_police == True: loves_police = True  else: love_police = False
+                                                   ^
 
 Ren'Py Version: Ren'Py 8.3.6.25022803
-Thu Mar 27 20:31:21 2025
+Mon Mar 31 16:57:12 2025

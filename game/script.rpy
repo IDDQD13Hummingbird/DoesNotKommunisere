@@ -110,7 +110,7 @@ label scenario_1:
 
     label choice1_a:
 
-        $ menu_flag = True
+        $ loves_police = False
 
         scene bg choice_1a
 
@@ -123,7 +123,6 @@ label scenario_1:
 
     label choice1_b:
 
-        $ menu_flag = False
         scene bg choice_1b
 
         anon "Thanks, mate! :D"
@@ -134,13 +133,13 @@ label scenario_1:
 
     label choice1_c:
 
-        $ menu_flag = True
+        $ loves_police = True
 
         scene bg choice_1c
 
         anon "WOAH, DUDE, CHILL OUT!"
 
-        "In Norway, the police number is 112."
+        "In Norway, the police number is 112. The non-emergency number is 02800, however, so you should be calling it instead."
         "When in universities, however, it is adviced to memorize your campus securitas number. You can usually find it at the reception."
         "It doesn't matter, however, because neither of the two will appreciate getting a call over someone asking for your trash."
         "A penalty or imprisonment up to 3 years can apply for the police misinformation. (source : Lovdata.no)"
@@ -175,8 +174,8 @@ label scenario_1:
         "You're walking through the hallways, and you see a youngster digging through the trash bins."
         "They're elbow deep in,{w} fishing out the bottles,{w} \nreally getting into the whole thing."
         label choice_2:
-            scene bg panting
-            with dissolve
+            scene bg and_then
+            with thought
         "You feel indifferent to this. What shall you do?"
 
 menu:
@@ -193,16 +192,22 @@ menu:
         label choice2_a:
             scene bg choice_2a
             anon "woah! chill, dude!"
-            "Here's the barnevarn number. Only use it if child is in danger."
+            "Alerting barnevern leads to an investigation of child's parents over the potential abuse and mistreatment."
+            "As a part of investigation, the child will be separated from the parents and interviewed in private. Some children will not be returned to their parents afterwards."
+            "Here's the barnevern number - 116 111. Only use it if you suspect the child to be in danger."
             "{i}With that thought in mind, let's consider the situation again :{/i}"
+            $ if loves_police == False: loves_police = False 
             jump choice_2
 
         label choice2_b:
             scene bg choice_2b
             anon "woah!! don't talk to me like that!!"
             "Okay, this is something worth calling \nthe child protection over. {i}On you.{/i}"
+            "In Norway, children protection laws prohibit verbal or physical abuse directed towards the children."
+            "In case of doubt, refer to {a=https://www.bufdir.no/en/child-welfare-services/role/}Bufdir{/a}."
             "{i}With that thought in mind, let's consider the situation again :{/i}"
             jump choice_2
+            $ loves_police = False
 
         label choice2_c:
             scene bg choice_2c
@@ -214,7 +219,60 @@ menu:
             anon "I see, I guess people are really chill about it here."
             "True! But it's worth mentioning that even well-intended things can be overdone."
             "Let's look through one last example:"
-        jump level_choose
+            scene bg friend
+            with fade
+            "You hang out at your friend's appartment, when suddenly..."
+            scene bg hello
+            "You notice piled up bottles on the windowstill."
+            "In fact, you look around, and only notice more:"
+            show rubbish at left
+            "Bags of pant are laying around the room, unappelingly."
+            hide rubbish
+        label choice_3:
+            scene bg hello
+            with thought
+        "You feel worried about your friend. What shall you do?"
+
+menu:
+    "Confront your friend about it harshly":
+        jump choice3_a
+    "Implore about your friend's mental well-being.":
+        jump choice3_b
+    "Offer to go pant them together!":
+        jump choice3_c
+    "There is no ''Calling the police''." if loves_police == True:
+        jump choice_3
+
+label choice3_a:
+    scene bg wtf
+    "''Wow, you {i}really{/i} live like this? \nI swear, bro, even pigs are more tidy.\nYo mama taught you nothing?''"
+    "Your friend hides their face in an embarassment, gets up and leaves."
+    "Generally, bullying a person with the issues of maintaining their living enviroment clean isn't a good approach."
+    "Hoarding is a real problem, and is very mentally taxing on those dealing with it. Criticizing someone who might already hate themselves for it will not motivate them to change."
+    "{i}With that thought in mind, let's consider the situation again :{/i}"
+    jump choice_3
+label choice3_b:
+    scene bg wtf
+    "''Bro are you okay? You need to talk?''"
+    scene bg are_you_okay
+    with dissolve
+    "And so, you did talk. you found out about all the hardship your friend is dealing with, and generally was a really good listener."
+    "After talking for hours, you got tired, and decided to sit down...{w} except, there's no place to drop and rest at because of all of the bottles."
+    "A thought crossed your mind: maybe, all the bottles laying around are contributing to their bad mental state, and they need to deal with them first?"
+    "{i}With that thought in mind, let's consider the situation again :{/i}"
+    jump choice_3
+label choice3_c:
+    scene bg wtf
+    "''Bro, let's go pant this! \nWe can get some ice cream together while we're at it!''"
+    scene bg go_pant
+    "You help your friend gather all of the bottles and put them into a grocery bag - typical for Norwegian panting."
+    "{i}We'll add a proper tutorial on how to pant later.{/i}"
+    jump choice3_done
+
+label choice3_done:
+    "Congratulations! Now you know how to adress the Pant.\nHope this will make your stay in Norway marginaly better."
+    $ i = 0
+    jump level_choose
   
 
 label scenario_2:
