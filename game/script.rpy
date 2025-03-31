@@ -74,9 +74,9 @@ label scenario_1:
     with crack
     "Have you ever bought a drink at the store and noticed that it suddenly costs two or three kroners extra?"
     "Ever wondered, ''What is this weird bottle tax? Is it somehow connected to that little <PANT> label?''"
-    "In fact, it is - almost every plastic or aluminum beverage container in Norway has an additional cost, \nwhich we call ''PANT'', attached to it."
+    "In fact, it is - almost every plastic or aluminum beverage container in Norway has an additional cost, which we call ''PANT'', attached to it."
     "Reasons for that? \nTo enforce recycling and to protect ecology."
-    "Don't worry, though - you can get your money back by depositing the bottle at the store \nafter you're done drinking."
+    "Don't worry, though - you can get your money back by depositing the bottle at the store after you're done drinking."
     "Unfortunately, you can't gulp the entire content of the bottle at the registry and only pay for the price of the beverage. (We wish, though.)"
 
     scene bg start
@@ -84,7 +84,7 @@ label scenario_1:
 
     "You've been walking through the school corridors, sipping on your drink..."
 
-    "As a responsible member of society, you decided to do the best thing you can with the bottle \nand throw it away into the appropriate trash bin, labeled with 'Bottles and Cans'."
+    "As a responsible member of society, you decided to do the best thing you can with the bottle and throw it away into the appropriate trash bin, labeled with 'Bottles and Cans'."
 
     "When suddenly..."
 
@@ -117,7 +117,7 @@ label scenario_1:
         anon "Oh come ooon, maaan..."
 
         "In Norway, you have a right to exercise your free will over your property."
-        "There's nothing wrong with your course of actions per se, but consider the following :{w}\nWhat if they're going to dumpster dive for the bottle? They'll get dirty and spread diseases."
+        "There's nothing wrong with your course of actions per se, but consider the following :{w}What if they're going to dumpster dive for the bottle? They'll get dirty and spread diseases."
         "{i}With that thought in mind, let's consider the situation again :{/i}"
         jump choice_1
 
@@ -141,8 +141,8 @@ label scenario_1:
         anon "WOAH, DUDE, CHILL OUT!"
 
         "In Norway, the police number is 112."
-        "When in universities, however, it is adviced to memorize your campus securitas number. \nYou can usually find it at the reception."
-        "It doesn't matter, however, because neither of the two will appreciate\n getting a call over someone asking for your trash."
+        "When in universities, however, it is adviced to memorize your campus securitas number. You can usually find it at the reception."
+        "It doesn't matter, however, because neither of the two will appreciate getting a call over someone asking for your trash."
         "A penalty or imprisonment up to 3 years can apply for the police misinformation. (source : Lovdata.no)"
         "{i}With that thought in mind, let's consider the situation again :{/i}"
         jump choice_1
@@ -159,7 +159,7 @@ label scenario_1:
         with dissolve
 
         "In Norway, it is not uncommon to observe others pick up beverage containers from the bins or public spaces. We call this phenomena ''Collecting pant'', or ''Panting''."
-        "Panting is a family-friendly activity which involves gathering plastic bottles\n and exchanging them for money at the stores. \nIt is practiced by all social groups."
+        "Panting is a family-friendly activity which involves gathering plastic bottles and exchanging them for money at the stores. \nIt is practiced by all social groups."
         anon "So, a gamified trash collection?"
         "So, a gamified trash collection."
         "It is disproportionately popular in big families, amongst kids, and with low-income individuals, because it helps cut living expenses."
