@@ -33,6 +33,7 @@ label start:
     # These display lines of dialogue.
 
 label lmain_menu :
+$ i = 0
 show bg level_choose   ##add main navigation screen background here. 
 menu:
         "Level select":
@@ -44,14 +45,17 @@ menu:
 
 label sources:
     "Useful information sourses :"
-    ##call screen debug_button #action OpenURL("https://www.patreon.com/bePatron?u=52492546") 
-    ##debug_button ("Patreon") action OpenURL("https://www.patreon.com/bePatron?u=52492546")
+
+    show screen patreon_button
+    
+    nvl clear
+
     p_nvl "Move to the Hamar Region - {a=https://hamarregionen.no/move-to-the-hamar-region/}{color=#ff0000}hamarregionen.no{/color}{/a}"
     p_nvl "Immigration office - {a=http://udi.no/en/}{color=#ff0000}UDI.no{/color}{/a}"
     p_nvl "Change adress or contact information, pay taxes - {a=https://www.skatteetaten.no/person/}{color=#ff0000}Skattetatten.no{/color}{/a}"
     p_nvl "Help finding job, getting medical help and financial support - {a=https://www.nav.no/}{color=#ff0000}NAV.no{/color}{/a}"
     nvl clear
-    ##hide debug_button
+    hide screen patreon_button
     jump lmain_menu
 
 label level_choose:
@@ -60,8 +64,10 @@ with dissolve
 "Choose your level :"
 
 menu:
-    "Pant game": ## if i == 0:
+    "Pant game" if i == 0:
         jump scenario_1
+    "Pant sorting minigame":
+        jump pant_minigame
     "More content":
         jump scenario_2
     "Back to main menu":

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 199: invalid syntax
-    if loves_police == True: loves_police = True  else: love_police = False
-                                                   ^
+File "game/script.rpy", line 67: end of line expected.
+    "Pant game": if i == 0:
+                 ^
 
-Ren'Py Version: Ren'Py 8.3.6.25022803
-Mon Mar 31 16:57:12 2025
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Tue Apr  1 08:48:11 2025
