@@ -8,6 +8,11 @@ define dream = ImageDissolve("imagedissolve dream.png", 1.0, 64)
 define thought = ImageDissolve("imagedissolve thought.png", 1.0, 64)
 define crack = ImageDissolve("imagedissolve crack.png", 1.0, 64)
 define p_nvl = Character("", kind=nvl)
+define us_nvl = Character("Group 5", color = "#b0d7e3", kind=nvl)
+transform slightleft:
+    xalign 0.25
+    yalign 1.0
+ 
 $ i = 0
  
 #screen debug_button():
@@ -35,7 +40,13 @@ label start:
 label lmain_menu :
 $ i = 0
 show bg level_choose   ##add main navigation screen background here. 
-menu:
+us_nvl "Welcome to our \n''Survival guide for new students at INN''*!"
+p_nvl "{i}*(name in development){/i}"
+p_nvl "Press ''Level select'' to access content,"
+p_nvl "''Useful sources'' for links to organisations \nthat can help you in Hamar,"
+p_nvl "and ''Exit'' to go back to the Main menu."
+us_nvl "Enjoy! :D"
+menu:   
         "Level select":
             jump level_choose
         "Useful sources":
@@ -52,8 +63,9 @@ label sources:
 
     p_nvl "Move to the Hamar Region - {a=https://hamarregionen.no/move-to-the-hamar-region/}{color=#ff0000}hamarregionen.no{/color}{/a}"
     p_nvl "Immigration office - {a=http://udi.no/en/}{color=#ff0000}UDI.no{/color}{/a}"
-    p_nvl "Change adress or contact information, pay taxes - {a=https://www.skatteetaten.no/person/}{color=#ff0000}Skattetatten.no{/color}{/a}"
-    p_nvl "Help finding job, getting medical help and financial support - {a=https://www.nav.no/}{color=#ff0000}NAV.no{/color}{/a}"
+    p_nvl "Change adress or contact information, \npay taxes - {a=https://www.skatteetaten.no/person/}{color=#ff0000}Skattetatten.no{/color}{/a}"
+    p_nvl "Help finding job, getting medical help \nand financial support - {a=https://www.nav.no/}{color=#ff0000}NAV.no{/color}{/a}"
+    p_nvl "Apply for student credit - {a=https://lanekassen.no/nb-NO/}{color=#ff0000}lanekassen.no{/color}{/a}"
     nvl clear
     hide screen patreon_button
     jump lmain_menu
@@ -64,18 +76,18 @@ with dissolve
 "Choose your level :"
 
 menu:
-    "Pant game" if i == 0:
+    "Pant game": 
         jump scenario_1
     "Pant sorting minigame":
         jump pant_minigame
-    "More content":
+    "More content"if i == 0:
         jump scenario_2
     "Back to main menu":
         jump lmain_menu
 
 
 label scenario_1:
-
+    $ loves_police = False
     scene bg pant
     with crack
     "Have you ever bought a drink at the store and noticed that it suddenly costs two or three kroners extra?"
@@ -88,9 +100,9 @@ label scenario_1:
     scene bg start
     with fade
 
-    "You've been walking through the school corridors, sipping on your drink..."
+    "You've been walking through the uni's corridors, sipping on your drink..."
 
-    "As a responsible member of society, you decided to do the best thing you can with the bottle and throw it away into the appropriate trash bin, labeled with 'Bottles and Cans'."
+    "As a responsible member of society, you decided to do the best thing you can with the bottle and throw it away into the appropriate trash bin, labeled with 'Bottles/Flask'."
 
     "When suddenly..."
 
@@ -101,7 +113,7 @@ label scenario_1:
     label choice_1:
     scene bg when_suddenly
     with thought
-    "An unknown person approaches and asks you for your bottle. What do you do in this situation?"
+    "An unfamiliar student approaches and asks you for your bottle. What do you do in this situation?"
 
     menu:
 
@@ -145,10 +157,10 @@ label scenario_1:
 
         anon "WOAH, DUDE, CHILL OUT!"
 
-        "In Norway, the police number is 112. The non-emergency number is 02800, however, so you should be calling it instead."
-        "When in universities, however, it is adviced to memorize your campus securitas number. You can usually find it at the reception."
-        "It doesn't matter, however, because neither of the two will appreciate getting a call over someone asking for your trash."
-        "A penalty or imprisonment up to 3 years can apply for the police misinformation. (source : Lovdata.no)"
+        "In Norway, the police number is 112. \nThe non-emergency police number is 02800."
+        "When at INN, however, it is adviced to use your campus securitas number - 93495020. You will find it at the reception."
+        "A penalty or imprisonment up to 3 years can apply for the police misinformation and misuse of 122 line (source : Lovdata.no), so make sure to call 02800 if it's not urgent."
+        "All of this doesn't matter in our case, however, because neither of them all will appreciate getting a call over someone asking for your trash."
         "{i}With that thought in mind, let's consider the situation again :{/i}"
         jump choice_1
         
@@ -200,7 +212,8 @@ menu:
             anon "woah! chill, dude!"
             "Alerting barnevern leads to an investigation of child's parents over the potential abuse and mistreatment."
             "As a part of investigation, the child will be separated from the parents and interviewed in private. Some children will not be returned to their parents afterwards."
-            "Here's the barnevern number - 116 111. Only use it if you suspect the child to be in danger."
+            "Here's the barnevern number - 116 111. \nOnly use it if you suspect the child to be in danger."
+            "(P.s. : In Norway, child digging through the trash \n{b}does not{/b} equal to child being abused.)"
             "{i}With that thought in mind, let's consider the situation again :{/i}"
             $ if loves_police == False: loves_police = False 
             jump choice_2
@@ -210,7 +223,7 @@ menu:
             anon "woah!! don't talk to me like that!!"
             "Okay, this is something worth calling \nthe child protection over. {i}On you.{/i}"
             "In Norway, children protection laws prohibit verbal or physical abuse directed towards the children."
-            "In case of doubt, refer to {a=https://www.bufdir.no/en/child-welfare-services/role/}Bufdir{/a}."
+            "In case of doubt, refer to {a=https://www.bufdir.no/en/child-welfare-services/role/}{color=#ff0000}Bufdir{/color}{/a}."
             "{i}With that thought in mind, let's consider the situation again :{/i}"
             jump choice_2
             $ loves_police = False
@@ -223,7 +236,7 @@ menu:
         #with fade
         label choice2_done:
             anon "I see, I guess people are really chill about it here."
-            "True! But it's worth mentioning that even well-intended things can be overdone."
+            "True! But it's worth mentioning that even well-intended things \ncan be overdone."
             "Let's look through one last example:"
             scene bg friend
             with fade
@@ -231,7 +244,8 @@ menu:
             scene bg hello
             "You notice piled up bottles on the windowstill."
             "In fact, you look around, and only notice more:"
-            show rubbish at left
+            show rubbish at slightleft
+            with vpunch
             "Bags of pant are laying around the room, unappelingly."
             hide rubbish
         label choice_3:
@@ -264,7 +278,7 @@ label choice3_b:
     with dissolve
     "And so, you did talk. you found out about all the hardship your friend is dealing with, and generally was a really good listener."
     "After talking for hours, you got tired, and decided to sit down...{w} except, there's no place to drop and rest at because of all of the bottles."
-    "A thought crossed your mind: maybe, all the bottles laying around are contributing to their bad mental state, and they need to deal with them first?"
+    "A thought crossed your mind: maybe, all the bottles laying around are contributing to their bad mental state, \nand they need to deal with them first?"
     "{i}With that thought in mind, let's consider the situation again :{/i}"
     jump choice_3
 label choice3_c:

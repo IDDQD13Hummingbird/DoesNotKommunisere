@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 67: end of line expected.
-    "Pant game": if i == 0:
-                 ^
+File "game/script.rpy", line 46: Indentation mismatch.
 
-Ren'Py Version: Ren'Py 8.3.7.25031702
-Tue Apr  1 08:48:11 2025
+Ren'Py Version: Ren'Py 8.3.6.25022803
+Tue Apr  1 09:51:01 2025

@@ -1617,4 +1617,4 @@ screen patreon_button():
         xalign 0.05
         yalign 0.3
         idle "gui/debug_button.png"
-        action OpenURL("https://www.patreon.com/bePatron?u=52492546")
+        action OpenURL("https://docs.google.com/forms/d/e/1FAIpQLSefQgoA1e2YYXFHBURse9ahTnFvx6gCZZFeaYTwrObs_Nsd6A/viewform")
