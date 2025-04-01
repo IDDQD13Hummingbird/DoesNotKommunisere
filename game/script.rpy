@@ -65,6 +65,7 @@ label sources:
     p_nvl "Immigration office - {a=http://udi.no/en/}{color=#ff0000}UDI.no{/color}{/a}"
     p_nvl "Change adress or contact information, \npay taxes - {a=https://www.skatteetaten.no/person/}{color=#ff0000}Skattetatten.no{/color}{/a}"
     p_nvl "Help finding job, getting medical help \nand financial support - {a=https://www.nav.no/}{color=#ff0000}NAV.no{/color}{/a}"
+    p_nvl "Apply to the university - {a=https://www.samordnaopptak.no/info/}{color=#ff0000}samordnaopptak.no{/color}{/a}"
     p_nvl "Apply for student credit - {a=https://lanekassen.no/nb-NO/}{color=#ff0000}lanekassen.no{/color}{/a}"
     nvl clear
     hide screen patreon_button
