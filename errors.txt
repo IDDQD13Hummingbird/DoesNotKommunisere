@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 63: end of line expected.
-    "Pant game": if i == 0:
-                 ^
+File "game/pant_minigame.rpy", line 107: 'ypadding' is not a keyword argument or valid child of the hbox statement.
+    ypadding 20
+            ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Mar 31 10:15:25 2025
+Tue Apr  1 04:07:35 2025

@@ -60,8 +60,10 @@ with dissolve
 "Choose your level :"
 
 menu:
-    "Pant game" if i == 0:
+    "Pant game":
         jump scenario_1
+    "Pant sorting minigame":
+        jump pant_minigame
     "More content":
         jump scenario_2
     "Back to main menu":
