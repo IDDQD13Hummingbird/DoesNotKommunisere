@@ -12,19 +12,19 @@ NameError: name 'i' is not defined
 Full traceback:
   File "game/script.rpy", line 63, in script
     menu:
-  File "C:\FreeFromDrive\SaveYourDesktop\renpy-8.3.6-sdk\renpy\ast.py", line 1632, in execute
+  File "C:\Users\romha\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1632, in execute
     choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\FreeFromDrive\SaveYourDesktop\renpy-8.3.6-sdk\renpy\exports\menuexports.py", line 100, in menu
+  File "C:\Users\romha\Downloads\renpy-8.3.7-sdk\renpy\exports\menuexports.py", line 100, in menu
     condition = renpy.python.py_eval(condition)
-  File "C:\FreeFromDrive\SaveYourDesktop\renpy-8.3.6-sdk\renpy\python.py", line 1215, in py_eval
+  File "C:\Users\romha\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1218, in py_eval
     return py_eval_bytecode(code, globals, locals)
-  File "C:\FreeFromDrive\SaveYourDesktop\renpy-8.3.6-sdk\renpy\python.py", line 1208, in py_eval_bytecode
+  File "C:\Users\romha\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1211, in py_eval_bytecode
     return eval(bytecode, globals, locals)
   File "game/script.rpy", line 64, in <module>
     "Pant game" if i == 0:
 NameError: name 'i' is not defined
 
-Windows-10-10.0.22631 AMD64
-Ren'Py 8.3.6.25022803
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.7.25031702
 DoesNotKommunisere 1.0
-Wed Mar 26 12:50:11 2025
+Mon Mar 31 10:16:52 2025

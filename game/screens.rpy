@@ -1609,3 +1609,12 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+## Patreon Button screen
+screen patreon_button():
+    zorder 100
+    imagebutton:
+        xalign 0.05
+        yalign 0.3
+        idle "gui/debug_button.png"
+        action OpenURL("https://www.patreon.com/bePatron?u=52492546")
