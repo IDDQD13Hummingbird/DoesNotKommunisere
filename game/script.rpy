@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -32,9 +32,22 @@ label start:
 
     # These display lines of dialogue.
 
+$ i = 0
+$ never = False
 label lmain_menu :
 show bg level_choose   ##add main navigation screen background here. 
-menu:
+if never == True:
+    jump lmain_menu_jump
+else:
+    us_nvl "Welcome to our \n''Survival guide for new students at INN''*!"
+    p_nvl "{i}*(name in development){/i}"
+    p_nvl "Press ''Level select'' to access content,"
+    p_nvl "''Useful sources'' for links to organisations \nthat can help you in Hamar,"
+    p_nvl "and ''Exit'' to go back to the Main menu."
+    us_nvl "Enjoy! :D"
+    $ never = True
+label lmain_menu_jump :
+menu:   
         "Level select":
             jump level_choose
         "Useful sources":
@@ -179,7 +192,7 @@ label scenario_1:
         "You feel indifferent to this. What shall you do?"
 
 menu:
-    "Where are their parents looking? \nCall the child services!":
+    "Where are their parents? Call child services!":
         jump choice2_a
 
     "Okay, this is unacceptable. Scold 'em.":
@@ -236,7 +249,7 @@ menu:
 menu:
     "Confront your friend about it harshly":
         jump choice3_a
-    "Implore about your friend's mental well-being.":
+    "Show emotional support.":
         jump choice3_b
     "Offer to go pant them together!":
         jump choice3_c

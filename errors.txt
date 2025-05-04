@@ -1,4 +1,4 @@
-﻿I'm sorry, but errors were detected in your script. Please correct the
+I'm sorry, but errors were detected in your script. Please correct the
 errors listed below, and try again.
 
 
@@ -8,3 +8,11 @@ File "game/script.rpy", line 199: invalid syntax
 
 Ren'Py Version: Ren'Py 8.3.6.25022803
 Mon Mar 31 16:57:12 2025
+
+File "game/script.rpy", line 44: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if never == True:
+    ^
+
+Ren'Py Version: Ren'Py 8.3.6.25022803
+Sun May  4 10:48:14 2025
+

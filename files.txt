@@ -1,0 +1,161 @@
+gui.rpy
+gui.rpyc
+gui.zip
+options.rpy
+options.rpyc
+pant_minigame.rpy
+pant_minigame.rpyc
+screens.rpy
+screens.rpyc
+script.rpy
+script.rpyc
+cache\bytecode-39.rpyb
+cache\py3analysis.rpyb
+cache\screens.rpyb
+cache\shaders.txt
+gui\bubble.png
+gui\debug_button.png
+gui\frame.png
+gui\game_menu.png
+gui\main_menu.png
+gui\namebox.png
+gui\notify.png
+gui\nvl.png
+gui\skip.png
+gui\textbox.png
+gui\thoughtbubble.png
+gui\window_icon.png
+gui\bar\bottom.png
+gui\bar\left.png
+gui\bar\right.png
+gui\bar\top.png
+gui\button\check_foreground.png
+gui\button\check_selected_foreground.png
+gui\button\choice_hover_background.png
+gui\button\choice_idle_background.png
+gui\button\hover_background.png
+gui\button\idle_background.png
+gui\button\quick_hover_background.png
+gui\button\quick_idle_background.png
+gui\button\radio_foreground.png
+gui\button\radio_selected_foreground.png
+gui\button\slot_hover_background.png
+gui\button\slot_idle_background.png
+gui\overlay\confirm.png
+gui\overlay\game_menu.png
+gui\overlay\main_menu.png
+gui\phone\nvl.png
+gui\phone\textbox.png
+gui\phone\bar\bottom.png
+gui\phone\bar\left.png
+gui\phone\bar\right.png
+gui\phone\bar\top.png
+gui\phone\button\check_foreground.png
+gui\phone\button\check_selected_foreground.png
+gui\phone\button\choice_hover_background.png
+gui\phone\button\choice_idle_background.png
+gui\phone\button\hover_background.png
+gui\phone\button\idle_background.png
+gui\phone\button\radio_foreground.png
+gui\phone\button\radio_selected_foreground.png
+gui\phone\button\slot_hover_background.png
+gui\phone\button\slot_idle_background.png
+gui\phone\overlay\game_menu.png
+gui\phone\overlay\main_menu.png
+gui\phone\scrollbar\horizontal_hover_bar.png
+gui\phone\scrollbar\horizontal_hover_thumb.png
+gui\phone\scrollbar\horizontal_idle_bar.png
+gui\phone\scrollbar\horizontal_idle_thumb.png
+gui\phone\scrollbar\vertical_hover_bar.png
+gui\phone\scrollbar\vertical_hover_thumb.png
+gui\phone\scrollbar\vertical_idle_bar.png
+gui\phone\scrollbar\vertical_idle_thumb.png
+gui\phone\slider\horizontal_hover_bar.png
+gui\phone\slider\horizontal_hover_thumb.png
+gui\phone\slider\horizontal_idle_bar.png
+gui\phone\slider\horizontal_idle_thumb.png
+gui\phone\slider\vertical_hover_bar.png
+gui\phone\slider\vertical_hover_thumb.png
+gui\phone\slider\vertical_idle_bar.png
+gui\phone\slider\vertical_idle_thumb.png
+gui\scrollbar\horizontal_hover_bar.png
+gui\scrollbar\horizontal_hover_thumb.png
+gui\scrollbar\horizontal_idle_bar.png
+gui\scrollbar\horizontal_idle_thumb.png
+gui\scrollbar\vertical_hover_bar.png
+gui\scrollbar\vertical_hover_thumb.png
+gui\scrollbar\vertical_idle_bar.png
+gui\scrollbar\vertical_idle_thumb.png
+gui\slider\horizontal_hover_bar.png
+gui\slider\horizontal_hover_thumb.png
+gui\slider\horizontal_idle_bar.png
+gui\slider\horizontal_idle_thumb.png
+gui\slider\vertical_hover_bar.png
+gui\slider\vertical_hover_thumb.png
+gui\slider\vertical_idle_bar.png
+gui\slider\vertical_idle_thumb.png
+images\ASansrounded.ttf
+images\bg and_then.jpg
+images\bg are_you_okay.jpg
+images\bg choice_1a.jpg
+images\bg choice_1b.jpg
+images\bg choice_1c.jpg
+images\bg choice_2a.jpg
+images\bg choice_2b.jpg
+images\bg choice_2c.jpg
+images\bg friend.jpg
+images\bg go_pant.jpg
+images\bg hello.jpg
+images\bg level_choose.png
+images\bg pant.png
+images\bg panting.jpg
+images\bg start.jpg
+images\bg when_suddenly.jpg
+images\bg wtf.jpg
+images\imagedissolve crack.png
+images\imagedissolve dream.png
+images\imagedissolve thought.png
+images\imagedissolve.aseprite
+images\rubbish.jpg
+images\PantMiniGame\BG\bg_pant_machine.png
+images\PantMiniGame\bottles\bottle_cola_empty.png
+images\PantMiniGame\bottles\bottle_glass_cola.png
+images\PantMiniGame\bottles\bottle_plastic_crushed.png
+images\PantMiniGame\bottles\bottle_plastic_crushed2.png
+images\PantMiniGame\bottles\bottle_water.png
+saves\1-1-LT1.save
+saves\1-2-LT1.save
+saves\1-3-LT1.save
+saves\_reload-2-LT1.save
+saves\auto-1-LT1.save
+saves\auto-10-LT1.save
+saves\auto-2-LT1.save
+saves\auto-3-LT1.save
+saves\auto-4-LT1.save
+saves\auto-5-LT1.save
+saves\auto-6-LT1.save
+saves\auto-7-LT1.save
+saves\auto-8-LT1.save
+saves\auto-9-LT1.save
+saves\navigation.json
+saves\persistent
+tl\None\common.rpym
+tl\None\common.rpymc
+unused\PlaypenSans-Regular.ttf
+unused\What to do with the ttf file.txt
+unused\animals_hero_reindeer.png
+unused\bg and_then.jpg
+unused\bg are_you_okay.jpg
+unused\bg choice_1a.jpg
+unused\bg choice_1b.jpg
+unused\bg choice_1c.jpg
+unused\bg choice_2a.jpg
+unused\bg choice_2b.jpg
+unused\bg choice_2c.jpg
+unused\bg friend.jpg
+unused\bg go_pant.jpg
+unused\bg hello.jpg
+unused\bg start.jpg
+unused\bg when_suddenly.jpg
+unused\bg wtf.jpg
+unused\main_menu.png
