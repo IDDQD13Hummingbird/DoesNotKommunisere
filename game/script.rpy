@@ -123,7 +123,7 @@ label scenario_1:
     label choice_1:
         scene bg when_suddenly
         with thought
-        "An unfamiliar student approaches and asks you for your bottle. What do you do in this situation?"
+        "An unfamiliar student approaches and asks you for your bottle. \nWhat do you do in this situation?"
 
         menu:
             "Throw it. It's trash.":
@@ -175,7 +175,7 @@ label scenario_1:
         anon "So it's a gamified trash collection?"
         "So it's a gamified trash collection."
         "It is disproportionately popular in big families, amongst kids, and with low-income individuals, because it helps to cut living expenses."
-        "With enough dedication, pant could cover your grocery bill for a week, with aspiring ''pant-ers'' regularly clocking 120-1100 kr per visit to the pant machine."
+        "With enough dedication, pant could cover your grocery bill for a week - you can collect ~50 nok worth of pant just from a single school's trashbin."
         "You should try it sometime! It's fun! \nYou'll get paid! And it's appreciated!"
 
         anon "Okay, sounds cool and all, but is it really appropriate to scrouge through the trash bins?"
@@ -308,12 +308,13 @@ label scenario_1:
         "Another unspoken rule is that a container needs to be emptied, have a cap on, and be in good enough conditions to be spinned inside of the pant machine"
         "First two done out of courtecy, but the latter is a part of pant machine's design.\nDon't bother panting crushed half-bent bottles. It won't work. We tried."
         "We're almost positive all cans will have a ''PANT'' symbol, but bottles are trickier. Double-check before you grab any."
-        show bg pant_machine
+        show pant_machine at center
         with dissolve
         "This is a pant machine. You insert a bottle or can through the opening, it spins it around to read the barcode, and then it dissapears forever via a conveyor."
         show clean_hands at left 
         "Make sure to empty and wash the bottles before you get at it, though."
         hide clean_hands
+        hide pant_machine
         show bg go_pant1
         "In order to pant, insert your container into the opening."
         show bg go_pant2
@@ -329,7 +330,7 @@ label scenario_1:
         show bg go_pant4
         "After you're done, or machine has had enough, press on the button to confirm that you're done and/or collect the cheque."
         "These are your reward. You can only expence them at the same store you have panted at, so plan accordingly."
-        show money
+        show bg money
         "Pant regularly, and you'll get absolutely filthy rich & sponsor your grocery list for days to come!"
         show clean_hands at slightleft
         with vpunch
