@@ -2,13 +2,77 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 42: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    nvl clear
-    ^
+File "game/script.rpy", line 12: expected statement.
+    <<<<<<< HEAD
+                ^
 
-File "game/script.rpy", line 51: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    nvl clear
-    ^
+File "game/script.rpy", line 16: expected statement.
+    =======
+          ^
 
-Ren'Py Version: Ren'Py 8.3.6.25022803
-Wed May  7 14:56:00 2025
+File "game/script.rpy", line 23: expected statement.
+    >>>>>>> mainfixattempt
+                          ^
+
+File "game/script.rpy", line 48: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 53: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 59: expected statement.
+    >>>>>>> mainfixattempt
+                          ^
+
+File "game/script.rpy", line 66: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 79: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 92: expected statement.
+    >>>>>>> mainfixattempt
+                          ^
+
+File "game/script.rpy", line 105: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 106: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 108: expected statement.
+    >>>>>>> mainfixattempt
+                          ^
+
+File "game/script.rpy", line 118: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 126: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 136: expected statement.
+    >>>>>>> mainfixattempt
+                          ^
+
+File "game/script.rpy", line 345: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 377: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 382: expected statement.
+    >>>>>>> mainfixattempt
+                          ^
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Wed May  7 15:24:33 2025

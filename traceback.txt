@@ -1,16 +1,23 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
+<<<<<<< HEAD
   File "game/script.rpy", line 59, in script
     show screen patreon_button
   File "renpy/common/000statements.rpy", line 647, in execute_show_screen
     renpy.show_screen(name, *args, **kwargs)
 Exception: Screen patreon_button is not known.
 
+=======
+  File "game/script.rpy", line 89, in script
+    jump pant_minigame
+ScriptError: could not find label 'pant_minigame'.
+>>>>>>> mainfixattempt
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
   File "game/script.rpy", line 59, in script
     show screen patreon_button
   File "C:\FreeFromDrive\SaveYourDesktop\renpy-8.3.6-sdk\renpy\ast.py", line 1987, in execute
@@ -25,8 +32,21 @@ Full traceback:
     raise Exception("Screen %s is not known.\n" % (name[0],))
 Exception: Screen patreon_button is not known.
 
+=======
+  File "game/script.rpy", line 89, in script
+    jump pant_minigame
+  File "C:\Users\romha\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1712, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\romha\Downloads\renpy-8.3.7-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'pant_minigame'.
+>>>>>>> mainfixattempt
 
-Windows-10-10.0.22631 AMD64
-Ren'Py 8.3.6.25022803
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.7.25031702
 DoesNotKommunisere 1.0
+<<<<<<< HEAD
 Wed May  7 14:51:24 2025
+=======
+Wed May  7 14:39:22 2025
+>>>>>>> mainfixattempt
