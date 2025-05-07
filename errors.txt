@@ -1,18 +1,14 @@
-I'm sorry, but errors were detected in your script. Please correct the
+﻿I'm sorry, but errors were detected in your script. Please correct the
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 199: invalid syntax
-    if loves_police == True: loves_police = True  else: love_police = False
-                                                   ^
+File "game/script.rpy", line 42: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    nvl clear
+    ^
 
-Ren'Py Version: Ren'Py 8.3.6.25022803
-Mon Mar 31 16:57:12 2025
-
-File "game/script.rpy", line 44: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    if never == True:
+File "game/script.rpy", line 51: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    nvl clear
     ^
 
 Ren'Py Version: Ren'Py 8.3.6.25022803
-Sun May  4 10:48:14 2025
-
+Wed May  7 14:56:00 2025

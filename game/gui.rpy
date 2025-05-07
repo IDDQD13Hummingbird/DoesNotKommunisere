@@ -25,17 +25,17 @@ define config.check_conflicting_properties = True
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#272782'
+define gui.accent_color = '#d7e1ec'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#bbbbbb'
+define gui.idle_color = '#d7e1ec'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
-define gui.idle_small_color = '#ffffff'
+define gui.idle_small_color = '#d7e1ec'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#c1e0ff'
+define gui.hover_color = '#ffffff'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
@@ -50,8 +50,8 @@ define gui.muted_color = '#3d5166'
 define gui.hover_muted_color = '#5b7a99'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#ffffff'
-define gui.interface_text_color = '#ffffff'
+define gui.text_color = '#d7e1ec'
+define gui.interface_text_color = '#d7e1ec'
 
 
 ## Fonts and Font Sizes ########################################################
@@ -72,7 +72,7 @@ define gui.text_size = 40
 define gui.name_text_size = 45
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 50
 
 ## The size of labels in the game's user interface.
 define gui.label_text_size = 40
@@ -81,7 +81,7 @@ define gui.label_text_size = 40
 define gui.notify_text_size = 24
 
 ## The size of the game's title.
-define gui.title_text_size = 70
+define gui.title_text_size = 2
 
 
 ## Main and Game Menus #########################################################
@@ -151,7 +151,7 @@ define gui.button_width = None
 define gui.button_height = None
 
 ## The borders on each side of the button, in left, top, right, bottom order.
-define gui.button_borders = Borders(6, 6, 6, 6)
+define gui.button_borders = Borders(10, 10, 10, 10)
 
 ## If True, the background image will be tiled. If False, the background image
 ## will be linearly scaled.
@@ -212,7 +212,7 @@ define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
 define gui.choice_button_text_ypos = 25
-define gui.choice_button_text_idle_color = '#473352'
+define gui.choice_button_text_idle_color = '#d7e1ec'
 define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = '#8888887f'
 

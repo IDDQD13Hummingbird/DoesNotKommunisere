@@ -8,8 +8,12 @@ define dream = ImageDissolve("imagedissolve dream.png", 1.0, 64)
 define thought = ImageDissolve("imagedissolve thought.png", 1.0, 64)
 define crack = ImageDissolve("imagedissolve crack.png", 1.0, 64)
 define p_nvl = Character("", kind=nvl)
-$ i = 0
+define us_nvl = Character("Group 5", color = "#b0d7e3", kind=nvl)
+transform slightleft:
+    xalign 0.25
+    yalign 1.0
  
+$ i = 0
 #screen debug_button():
 #    imagebutton:
 #        xalign 0.7
@@ -19,7 +23,7 @@ $ i = 0
 # The game starts here.
 
 label start:
-
+$ i = 0
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -32,21 +36,18 @@ label start:
 
     # These display lines of dialogue.
 
-$ i = 0
-$ never = False
 label lmain_menu :
 show bg level_choose   ##add main navigation screen background here. 
-if never == True:
-    jump lmain_menu_jump
-else:
+if i == 0:
+    nvl clear
     us_nvl "Welcome to our \n''Survival guide for new students at INN''*!"
     p_nvl "{i}*(name in development){/i}"
     p_nvl "Press ''Level select'' to access content,"
     p_nvl "''Useful sources'' for links to organisations \nthat can help you in Hamar,"
     p_nvl "and ''Exit'' to go back to the Main menu."
     us_nvl "Enjoy! :D"
-    $ never = True
-label lmain_menu_jump :
+    nvl clear
+    $ i = 1
 menu:   
         "Level select":
             jump level_choose
@@ -57,15 +58,21 @@ menu:
 
 label sources:
     "Useful information sourses :"
-    ##call screen debug_button #action OpenURL("https://www.patreon.com/bePatron?u=52492546") 
-    ##debug_button ("Patreon") action OpenURL("https://www.patreon.com/bePatron?u=52492546")
+
+    show screen patreon_button
+    
+    nvl clear
+
     p_nvl "Move to the Hamar Region - {a=https://hamarregionen.no/move-to-the-hamar-region/}{color=#ff0000}hamarregionen.no{/color}{/a}"
     p_nvl "Immigration office - {a=http://udi.no/en/}{color=#ff0000}UDI.no{/color}{/a}"
-    p_nvl "Change adress or contact information, pay taxes - {a=https://www.skatteetaten.no/person/}{color=#ff0000}Skattetatten.no{/color}{/a}"
-    p_nvl "Help finding job, getting medical help and financial support - {a=https://www.nav.no/}{color=#ff0000}NAV.no{/color}{/a}"
+    p_nvl "Change adress or contact information, \npay taxes - {a=https://www.skatteetaten.no/person/}{color=#ff0000}Skattetatten.no{/color}{/a}"
+    p_nvl "Help finding job, getting medical help \nand financial support - {a=https://www.nav.no/}{color=#ff0000}NAV.no{/color}{/a}"
+    p_nvl "Apply to the university - {a=https://www.samordnaopptak.no/info/}{color=#ff0000}samordnaopptak.no{/color}{/a}"
+    p_nvl "Apply for student credit - {a=https://lanekassen.no/nb-NO/}{color=#ff0000}lanekassen.no{/color}{/a}"
     nvl clear
-    ##hide debug_button
+    hide screen patreon_button
     jump lmain_menu
+
 
 label level_choose:
 show bg level_choose
@@ -73,9 +80,9 @@ with dissolve
 "Choose your level :"
 
 menu:
-    "Pant game": ## if i == 0:
+    "Pant game": 
         jump scenario_1
-    "More content":
+    "More content": ## if i == 0:
         jump scenario_2
     "Back to main menu":
         jump lmain_menu
@@ -279,6 +286,7 @@ label choice3_c:
     "''Bro, let's go pant this! \nWe can get some ice cream together while we're at it!''"
     scene bg go_pant
     "You help your friend gather all of the bottles and put them into a grocery bag - typical for Norwegian panting."
+
     "{i}We'll add a proper tutorial on how to pant later.{/i}"
     jump choice3_done
 
