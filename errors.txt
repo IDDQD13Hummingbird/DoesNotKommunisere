@@ -2,77 +2,49 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 12: expected statement.
-    <<<<<<< HEAD
-                ^
+File "game/pant_minigame.rpy", line 6: unexpected EOF while parsing
+    "images/PantMiniGame/BG/bg_pant_machine.png";
+                                                 ^
 
-File "game/script.rpy", line 16: expected statement.
-    =======
-          ^
+File "game/pant_minigame.rpy", line 7: unexpected EOF while parsing
+    "images/PantMiniGame/BG/PantIntermission.jpg";
+                                                  ^
 
-File "game/script.rpy", line 23: expected statement.
-    >>>>>>> mainfixattempt
-                          ^
+File "game/pant_minigame.rpy", line 8: unexpected EOF while parsing
+    "images/PantMiniGame/BG/pantintermissionaccepted.png";
+                                                          ^
 
-File "game/script.rpy", line 48: expected statement.
-    <<<<<<< HEAD
-                ^
+File "game/pant_minigame.rpy", line 9: unexpected EOF while parsing
+    "images/PantMiniGame/BG/pantintermissionnotaccepted.png";
+                                                             ^
 
-File "game/script.rpy", line 53: expected statement.
-    =======
-          ^
+File "game/pant_minigame.rpy", line 12: unexpected EOF while parsing
+    "images/PantMiniGame/bottles/bottle_plastic_crushed.png";
+                                                             ^
 
-File "game/script.rpy", line 59: expected statement.
-    >>>>>>> mainfixattempt
-                          ^
+File "game/pant_minigame.rpy", line 13: unexpected EOF while parsing
+    "images/PantMiniGame/bottles/bottle_cola_empty.png";
+                                                        ^
 
-File "game/script.rpy", line 66: expected statement.
-    <<<<<<< HEAD
-                ^
+File "game/pant_minigame.rpy", line 14: unexpected EOF while parsing
+    "images/PantMiniGame/bottles/bottle_plastic_crushed2.png";
+                                                              ^
 
-File "game/script.rpy", line 79: expected statement.
-    =======
-          ^
+File "game/pant_minigame.rpy", line 15: unexpected EOF while parsing
+    "images/PantMiniGame/bottles/bottle_water.png";
+                                                   ^
 
-File "game/script.rpy", line 92: expected statement.
-    >>>>>>> mainfixattempt
-                          ^
+File "game/pant_minigame.rpy", line 16: unexpected EOF while parsing
+    "images/PantMiniGame/bottles/bottle_glass_cola.png";
+                                                        ^
 
-File "game/script.rpy", line 105: expected statement.
-    <<<<<<< HEAD
-                ^
+File "game/pant_minigame.rpy", line 19: unexpected EOF while parsing
+    Frame("gui/button/idle_background.png", 10, 10);
+                                                    ^
 
-File "game/script.rpy", line 106: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 108: expected statement.
-    >>>>>>> mainfixattempt
-                          ^
-
-File "game/script.rpy", line 118: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 126: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 136: expected statement.
-    >>>>>>> mainfixattempt
-                          ^
-
-File "game/script.rpy", line 345: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 377: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 382: expected statement.
-    >>>>>>> mainfixattempt
-                          ^
+File "game/pant_minigame.rpy", line 20: unexpected EOF while parsing
+    Frame("gui/button/idle_background.png", 10, 10);
+                                                    ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Wed May  7 15:24:33 2025
+Wed May  7 15:44:49 2025
