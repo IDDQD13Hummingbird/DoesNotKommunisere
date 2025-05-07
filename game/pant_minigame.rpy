@@ -37,7 +37,7 @@ init python:
     bottles = {
         "plastic_crushed": {"image": "bottle_plastic_crushed", "pantable": False, "value": 2},
         "cola_empty": {"image": "bottle_cola_empty", "pantable": True, "value": 3},
-        "plastic_crushed2": {"image": "bottle_plastic_crushed2", "pantable": True, "value": 2},
+        "plastic_crushed2": {"image": "bottle_plastic_crushed2", "pantable": False, "value": 2},
         "water_bottle": {"image": "bottle_water", "pantable": False, "value": 2},
         "glass_cola": {"image": "bottle_glass_cola", "pantable": False, "value": 3}
     }
