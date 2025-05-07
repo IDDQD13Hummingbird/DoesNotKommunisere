@@ -25,7 +25,7 @@ default i = 0
 # The game starts here.
 
 label start:
-    $ i = 0
+
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -38,19 +38,20 @@ label start:
 
     # These display lines of dialogue.
 
-    $ i = 0
     $ never = False
     jump lmain_menu
 
 label lmain_menu:
     $ i = 0
     show bg level_choose   ##add main navigation screen background here. 
-    us_nvl "Welcome to our \n''Survival guide for new students at INN''*!"
-    p_nvl "{i}*(name in development){/i}"
-    p_nvl "Press ''Level select'' to access content,"
-    p_nvl "''Useful sources'' for links to organisations \nthat can help you in Hamar,"
-    p_nvl "and ''Exit'' to go back to the Main menu."
-    us_nvl "Enjoy! :D"
+    if never == False:
+        us_nvl "Welcome to our \n''Survival guide for new students at INN''*!"
+        p_nvl "{i}*(name in development){/i}"
+        p_nvl "Press ''Level select'' to access content,"
+        p_nvl "''Useful sources'' for links to organisations \nthat can help you in Hamar,"
+        p_nvl "and ''Exit'' to go back to the Main menu."
+        us_nvl "Enjoy! :D"
+        $ never = True
     menu:   
             "Level select":
                 jump level_choose
@@ -82,7 +83,6 @@ label sources:
 
 label level_choose:
     show bg level_choose
-    with dissolve
     "Choose your level :"
 
     menu:
@@ -171,10 +171,10 @@ label scenario_1:
         with dissolve
 
         "In Norway, it is not uncommon to observe others pick up beverage containers from the bins or public spaces. We call this phenomena ''Collecting pant'', or ''Panting''."
-        "Panting is a family-friendly activity which involves gathering plastic bottles and exchanging them for money at the stores. \nIt is practiced by all social groups."
-        anon "So, a gamified trash collection?"
-        "So, a gamified trash collection."
-        "It is disproportionately popular in big families, amongst kids, and with low-income individuals, because it helps cut living expenses."
+        "You'll be amazed to learn that there's an entire culture build around gathering plastic bottles and exchanging them for money at the stores. Panting is practiced by all social groups."
+        anon "So it's a gamified trash collection?"
+        "So it's a gamified trash collection."
+        "It is disproportionately popular in big families, amongst kids, and with low-income individuals, because it helps to cut living expenses."
         "With enough dedication, pant could cover your grocery bill for a week, with aspiring ''pant-ers'' regularly clocking 120-1100 kr per visit to the pant machine."
         "You should try it sometime! It's fun! \nYou'll get paid! And it's appreciated!"
 
@@ -227,18 +227,20 @@ label scenario_1:
 
         label choice2_c:
             scene bg choice_2c
-            anon "Yeah! I'm going to buy ice cream later!"
+            "Ay, good job, kid! What'cha gonna spend all that pant money on?"
+            anon "Thanks! I'm going to buy ice cream later! :D"
             #with fade
         label choice2_done:
             anon "I see, I guess people are really chill about it here."
-            "True! But it's worth mentioning that even well-intended things \ncan be overdone."
+            anon "Good for the environment, good for the wallet. \nAlmost feels like this entire panting thing needs to be praised and propagated!"
+            "True! But it's worth mentioning that even well-intended things {i}can{/i} be overdone."
             "Let's look through one last example:"
             scene bg friend
             with fade
+            "You hang out at your friend's appartment, when suddenly..."
             scene bg hello
             "You notice piled up bottles on the windowstill."
             "In fact, you look around, and only notice more:"
-            show rubbish at left
             show rubbish at slightleft
             with vpunch
             "Bags of pant are laying around the room, unappelingly."
@@ -283,20 +285,72 @@ label scenario_1:
         "''Bro, let's go pant this! \nWe can get some ice cream together while we're at it!''"
         scene bg go_pant
         "You help your friend gather all of the bottles and put them into a grocery bag - typical for Norwegian panting."
-        "{i}We'll add a proper tutorial on how to pant later.{/i}"
         jump choice3_done
 
     label choice3_done:
+        show bg level_choose
+        with dream
+        "{i}Now, friend, important question - do {b}you{/b} know how to pant?{/i}"
+        menu:
+                "I do. Let's just finish the level now":
+                    jump scenario_1_done
+                "I don't, actually. Teach me how!":
+                    jump pant_tutorial
+
+    label pant_tutorial:   
+        show bg pant_tutorial
+        with dream
+        "It's about time you know what makes a difference between altruistically collecting trash and earning some pocket money off of it."
+        "See this label? It's a ''PANT'' symbol, a requirement for all pantable bottles set in place by {a=https://infinitum.no/}{color=#ff0000}Infinitum{/color}{/a}."
+        "In order to be able to pant a container, it must have a clearly visible barcode and a ''PANT'' symbol still attached."
+        "Since ''PANT'' is an international system, but not a single government wants to pay for foreign bottles, you can only pant what's been produced locally, locally."
+        "''Why do I need to know this?''\nWait until your friends go to Sweden for groceries."
+        "Another unspoken rule is that a container needs to be emptied, have a cap on, and be in good enough conditions to be spinned inside of the pant machine"
+        "First two done out of courtecy, but the latter is a part of pant machine's design.\nDon't bother panting crushed half-bent bottles. It won't work. We tried."
+        "We're almost positive all cans will have a ''PANT'' symbol, but bottles are trickier. Double-check before you grab any."
+        show bg pant_machine
+        with dissolve
+        "This is a pant machine. You insert a bottle or can through the opening, it spins it around to read the barcode, and then it dissapears forever via a conveyor."
+        show clean_hands at left 
+        "Make sure to empty and wash the bottles before you get at it, though."
+        hide clean_hands
+        show bg go_pant1
+        "In order to pant, insert your container into the opening."
+        show bg go_pant2
+        "You can keep going with them in one session until you run out of bottles or machine stops you."
+        anon "Stop me? Why would a machine-"
+        show bg go_pant3
+        "The machine will stop you if it's capacity is full, or, far more likely, if you give it a wrong bottle."
+        "Check your container. Did you wash and wipe it? Is symbol and barcode at place? Is it not too crushed? Are you certain it's not Swedish?"
+        "If the answer to all of them - ''yes'', keep stubbornly inserting until the machine accepts, or you get too bored trying."
+        "Otherwice,"
+        show bg glass
+        "you know what to do."
+        show bg go_pant4
+        "After you're done, or machine has had enough, press on the button to confirm that you're done and/or collect the cheque."
+        "These are your reward. You can only expence them at the same store you have panted at, so plan accordingly."
+        show money
+        "Pant regularly, and you'll get absolutely filthy rich & sponsor your grocery list for days to come!"
+        show clean_hands at slightleft
+        with vpunch
+        "Seriously, though, make sure to wash those hands after. Bottles are dirtier than you think."
+        hide clean_hands
+        jump scenario_1_done
+
+    label scenario_1_done:    
         "Congratulations! Now you know how to adress the Pant.\nHope this will make your stay in Norway marginaly better."
         $ i = 0
+        show bg level_choose
+        with dissolve
         jump level_choose
   
 
 label scenario_2:
-    scene bg level_2
-    with dissolve
-    "More content to be added here in future updates..."
-    $ i = 0
+    "Nothing here yet!"
+    "But you can help us make more content by answering our survey {a=https://docs.google.com/forms/d/e/1FAIpQLSefQgoA1e2YYXFHBURse9ahTnFvx6gCZZFeaYTwrObs_Nsd6A/viewform}{color=#ff0000}here{/color}{/a}!"
+    "You can find a link to {a=https://docs.google.com/forms/d/e/1FAIpQLSefQgoA1e2YYXFHBURse9ahTnFvx6gCZZFeaYTwrObs_Nsd6A/viewform}{color=#ff0000}this survey{/color}{/a} at any time by clicking the button in ''Useful links''. \nBut for now, please, complete the game first."
+    $ i = 1
+
     jump level_choose
 
 label end_game:
